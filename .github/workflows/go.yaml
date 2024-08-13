@@ -28,12 +28,12 @@ jobs:
       - name: Create .env file
         run: |
           touch .env
-          echo TOKEN_HASH=${{ secrets.TOKEN_HASH }} >> .env
-          echo DB_HOST=${{ secrets.DB_HOST }} >> .env
-          echo DB_PORT=${{ secrets.DB_PORT }} >> .env
-          echo DB_USER=${{ secrets.DB_USER }} >> .env
-          echo DB_PASSWORD=${{ secrets.DB_PASSWORD }} >> .env
-          echo DB_NAME=${{ secrets.DB_NAME }} >> .env
+          echo TOKEN_HASH=${{ secrets.TOKEN_HASH }} >> config/.env
+          echo DB_HOST=${{ secrets.DB_HOST }} >> config/.env
+          echo DB_PORT=${{ secrets.DB_PORT }} >> config/.env
+          echo DB_USER=${{ secrets.DB_USER }} >> config/.env
+          echo DB_PASSWORD=${{ secrets.DB_PASSWORD }} >> config/.env
+          echo DB_NAME=${{ secrets.DB_NAME }} >> config/.env
 
       - name: Build and Push Docker Image
         run: |
