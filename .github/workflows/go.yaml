@@ -9,7 +9,7 @@ on:
 env:
   REGISTRY: "cr.selcloud.ru/registry"
   IMAGE_NAME: "go-recipe"
-  CONTAINER_NAME: "KkJT9TvY&gq95c"
+  CONTAINER_NAME: "go-recipe-container"
 
 jobs:
   image-build-and-push:
@@ -28,7 +28,7 @@ jobs:
       - name: Create .env file
         run: |
           touch .env
-          echo TELEGRAM_TOKEN=${{ secrets.TOKEN_HASH }} >> .env
+          echo TOKEN_HASH=${{ secrets.TOKEN_HASH }} >> .env
           echo DB_HOST=${{ secrets.DB_HOST }} >> .env
           echo DB_PORT=${{ secrets.DB_PORT }} >> .env
           echo DB_USER=${{ secrets.DB_USER }} >> .env
