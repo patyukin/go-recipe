@@ -1,0 +1,4 @@
+package: genapi
+generate:
+  models: true
+output: internal/gateway/http/gen/models.gen.go

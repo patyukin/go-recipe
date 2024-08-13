@@ -1,0 +1,20 @@
+services:
+  app:
+    build:
+      dockerfile: local.Dockerfile
+    restart: always
+    volumes:
+      - .:/app
+    ports:
+      - "1235:1235"
+    networks:
+      - pg
+      - redis
+
+networks:
+  pg:
+    name: pg
+    external: true
+  redis:
+    name: redis
+    external: true

@@ -1,0 +1,5 @@
+package: genapi
+output: internal/gateway/http/gen/rest.gen.go
+generate:
+  strict-server: true
+  std-http-server: true

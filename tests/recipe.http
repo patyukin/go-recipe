@@ -1,0 +1,8 @@
+### Send POST request with json body
+POST http://0.0.0.0:1234/authors
+Content-Type: application/json
+
+{
+  "login": "new_login",
+  "bio": "content"
+}
