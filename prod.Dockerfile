@@ -17,4 +17,6 @@ COPY config/.env .env
 ENV ENV_CONFIG_FILE_PATH=.env
 COPY migrations migrations
 
+EXPOSE 1235
+
 CMD ["./recipe"]
