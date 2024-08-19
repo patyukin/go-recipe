@@ -11,10 +11,6 @@ FROM alpine:3.19
 
 WORKDIR /app
 COPY --from=builder /app/bin/recipe .
-COPY config/config.yaml config.yaml
-ENV YAML_CONFIG_FILE_PATH=config.yaml
-COPY config/.env .env
-ENV ENV_CONFIG_FILE_PATH=.env
 COPY migrations migrations
 
 EXPOSE 1235

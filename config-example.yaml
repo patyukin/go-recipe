@@ -1,0 +1,12 @@
+min_log_level: "debug"
+http_port: 1235
+read_timeout: 10
+write_timeout: 5
+api_base_url: "http://0.0.0.0:1234"
+token_hash: "sdfsdf"
+postgresql:
+  host: "db"
+  port: 5432
+  user: "user"
+  password: "user"
+  name: "recipes"

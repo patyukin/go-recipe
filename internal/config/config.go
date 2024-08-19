@@ -21,9 +21,9 @@ type Config struct {
 		Port     int    `yaml:"port" validate:"required,numeric"`
 		User     string `yaml:"user" validate:"required"`
 		Password string `yaml:"password" validate:"required"`
-		Name     string `yaml:"database" validate:"required"`
+		Name     string `yaml:"name" validate:"required"`
 	} `yaml:"postgresql"`
-	Token string `validate:"required"`
+	Token string `yaml:"token_hash" validate:"required"`
 }
 
 func LoadConfig() (*Config, error) {
